@@ -12,6 +12,14 @@ namespace OOBootCamp2015
             this.count = count;
         }
 
+        public int Space {
+            get { return count - cars.Count; }
+        }
+
+        public bool IsFull {
+            get { return count == cars.Count; }
+        }
+
         public Ticket Store(Car car)
         {
             if (cars.Count == count)

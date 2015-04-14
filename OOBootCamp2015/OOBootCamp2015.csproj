@@ -53,6 +53,8 @@
     <Compile Include="Car.cs" />
     <Compile Include="LengthFacts.cs" />
     <Compile Include="ParkingBoy.cs" />
+    <Compile Include="SmartParkingBoy.cs" />
+    <Compile Include="SmartParkingBoyFacts.cs" />
     <Compile Include="ParkingBoyFacts.cs" />
     <Compile Include="ParkingLot.cs" />
     <Compile Include="ParkingLotFacts.cs" />

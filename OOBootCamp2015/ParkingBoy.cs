@@ -4,7 +4,7 @@ namespace OOBootCamp2015
 {
     public class ParkingBoy
     {
-        private readonly ParkingLot[] parkinglots;
+        protected readonly ParkingLot[] parkinglots;
 
 
         public ParkingBoy(ParkingLot[] parkinglots)
@@ -12,9 +12,11 @@ namespace OOBootCamp2015
             this.parkinglots = parkinglots;
         }
 
-        public Ticket Store(Car car)
+        public virtual Ticket Store(Car car)
         {
-            return parkinglots.Select(parkinglot => parkinglot.Store(car)).FirstOrDefault(ticket => ticket != null);
+            var parkingLot = parkinglots.FirstOrDefault(pl => !pl.IsFull);
+
+            return parkingLot != null ? parkingLot.Store(car) : null;
         }
 
         public Car Pick(Ticket ticket)
