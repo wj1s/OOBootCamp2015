@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace OOBootCamp2015
 {
-    public class ParkingLot
+    public class ParkingLot : IParkingAndStore
     {
         private readonly int count;
         private readonly Dictionary<Ticket,Car> cars = new Dictionary<Ticket, Car>();

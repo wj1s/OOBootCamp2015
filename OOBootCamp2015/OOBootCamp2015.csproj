@@ -51,8 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
+    <Compile Include="IParkingAndStore.cs" />
     <Compile Include="LengthFacts.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="ParkingBoy.cs" />
+    <Compile Include="ManagerFacts.cs" />
     <Compile Include="SmartParkingBoy.cs" />
     <Compile Include="SuperParkingBoyFacts.cs" />
     <Compile Include="SmartParkingBoyFacts.cs" />

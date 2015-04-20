@@ -2,7 +2,7 @@
 
 namespace OOBootCamp2015
 {
-    public class ParkingBoy
+    public class ParkingBoy : IParkingAndStore
     {
         protected readonly ParkingLot[] parkinglots;
 
@@ -21,6 +21,10 @@ namespace OOBootCamp2015
         public Car Pick(Ticket ticket)
         {
             return parkinglots.Select(parkinglot => parkinglot.Pick(ticket)).FirstOrDefault(car => car != null);
+        }
+
+        public bool IsFull {
+            get { return parkinglots.All(p => p.IsFull); }
         }
 
         public virtual ParkingLot FindParkingLot()
