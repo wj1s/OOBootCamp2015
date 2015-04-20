@@ -51,16 +51,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
-    <Compile Include="IParkingLotFinder.cs" />
     <Compile Include="LengthFacts.cs" />
-    <Compile Include="NomalParkingLotFinder.cs" />
     <Compile Include="ParkingBoy.cs" />
+    <Compile Include="SmartParkingBoy.cs" />
     <Compile Include="SmartParkingBoyFacts.cs" />
     <Compile Include="ParkingBoyFacts.cs" />
     <Compile Include="ParkingLot.cs" />
     <Compile Include="ParkingLotFacts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmartParkingLotFinder.cs" />
     <Compile Include="Ticket.cs" />
   </ItemGroup>
   <ItemGroup>
