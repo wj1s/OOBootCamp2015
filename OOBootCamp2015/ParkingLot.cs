@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace OOBootCamp2015
 {
@@ -18,6 +19,13 @@ namespace OOBootCamp2015
 
         public bool IsFull {
             get { return count == cars.Count; }
+        }
+
+        public double Vacancy {
+            get
+            {
+                return ((double)Space)/count;
+            }
         }
 
         public Ticket Store(Car car)

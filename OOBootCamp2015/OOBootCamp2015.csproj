@@ -54,11 +54,13 @@
     <Compile Include="LengthFacts.cs" />
     <Compile Include="ParkingBoy.cs" />
     <Compile Include="SmartParkingBoy.cs" />
+    <Compile Include="SuperParkingBoyFacts.cs" />
     <Compile Include="SmartParkingBoyFacts.cs" />
     <Compile Include="ParkingBoyFacts.cs" />
     <Compile Include="ParkingLot.cs" />
     <Compile Include="ParkingLotFacts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuperParkingBoy.cs" />
     <Compile Include="Ticket.cs" />
   </ItemGroup>
   <ItemGroup>
