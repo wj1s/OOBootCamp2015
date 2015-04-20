@@ -8,9 +8,9 @@ namespace OOBootCamp2015
         {
         }
 
-        public override Ticket Store(Car car)
+        public override ParkingLot FindParkingLot()
         {
-            return parkinglots.OrderByDescending(p => p.Vacancy).First().Store(car);
+            return parkinglots.OrderByDescending(p => p.Vacancy).First();
         }
     }
 }
