@@ -8,7 +8,7 @@ namespace OOBootCamp2015
         public void should_park_one_car_and_pick_by_parking_lot()
         {
             var parkinglot = new ParkingLot(1);
-            var smartParkingBoy = new SmartParkingBoy(new[] {parkinglot});
+            var smartParkingBoy = new ParkingBoy(new[] {parkinglot}, new SmartParkingLotFinder());
             var car = new Car();
 
             var ticket = smartParkingBoy.Store(car);
@@ -20,7 +20,7 @@ namespace OOBootCamp2015
         public void should_park_more_than_one_car_and_pick_by_parking_lot()
         {
             var parkingLot = new ParkingLot(2);
-            var smartParkingBoy = new SmartParkingBoy(new[] {parkingLot});
+            var smartParkingBoy = new ParkingBoy(new[] {parkingLot}, new SmartParkingLotFinder());
             var firstCar = new Car();
             var secondCar = new Car();
 
@@ -36,7 +36,7 @@ namespace OOBootCamp2015
         {
             var firstParkingLot = new ParkingLot(1);
             var secondParkingLot = new ParkingLot(2);
-            var smartParkingBoy = new SmartParkingBoy(new[] {firstParkingLot, secondParkingLot});
+            var smartParkingBoy = new ParkingBoy(new[] {firstParkingLot, secondParkingLot}, new SmartParkingLotFinder());
             var car = new Car();
 
             var ticketForFirstCar = smartParkingBoy.Store(car);
@@ -54,7 +54,7 @@ namespace OOBootCamp2015
         {
             var firstParkingLot = new ParkingLot(1);
             var secondParkingLot = new ParkingLot(1);
-            var smartParkingBoy = new SmartParkingBoy(new[] {firstParkingLot, secondParkingLot});
+            var smartParkingBoy = new ParkingBoy(new[] {firstParkingLot, secondParkingLot}, new SmartParkingLotFinder());
             smartParkingBoy.Store(new Car());
             smartParkingBoy.Store(new Car());
 
@@ -65,7 +65,7 @@ namespace OOBootCamp2015
         public void should_pick_a_car_by_ticket()
         {
             var parkingLot = new ParkingLot(1);
-            var smartParkingBoy = new SmartParkingBoy(new[] {parkingLot});
+            var smartParkingBoy = new ParkingBoy(new[] {parkingLot}, new SmartParkingLotFinder());
             var car = new Car();
 
             var ticket = smartParkingBoy.Store(car);
@@ -76,7 +76,7 @@ namespace OOBootCamp2015
         [Fact]
         public void should_not_pick_a_car_more_than_one_time_with_one_ticket()
         {
-            var smartParkingBoy = new SmartParkingBoy(new[] {new ParkingLot(1)});
+            var smartParkingBoy = new ParkingBoy(new[] {new ParkingLot(1)}, new SmartParkingLotFinder());
             var ticket = smartParkingBoy.Store(new Car());
             smartParkingBoy.Pick(ticket);
 
@@ -88,7 +88,7 @@ namespace OOBootCamp2015
         [Fact]
         public void should_pick_a_car_by_from_more_than_one_parking_lot()
         {
-            var smartParkingBoy = new SmartParkingBoy(new[] { new ParkingLot(1), new ParkingLot(1) });
+            var smartParkingBoy = new ParkingBoy(new[] { new ParkingLot(1), new ParkingLot(1) }, new SmartParkingLotFinder());
             var firstCar = new Car();
             var secondCar = new Car();
 
