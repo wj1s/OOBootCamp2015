@@ -12,5 +12,18 @@ namespace OOBootCamp2015
         {
             return parkingAndStores.FirstOrDefault(pl => !pl.IsFull);
         }
+
+        public string Report(int prefixCount = 0)
+        {
+            var prefix = "";
+            for (int i = 0; i < prefixCount; i++)
+            {
+                prefix += "    ";
+            }
+            string report = "";
+            foreach (ICanParkingAndStore store in parkingAndStores)
+                report = report + (store.Report(prefixCount + 1));
+            return "\r\nM " + Space + " " + Count + "\r\n"+report;
+        }
     }
 }

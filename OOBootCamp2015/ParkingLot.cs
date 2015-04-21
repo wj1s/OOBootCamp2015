@@ -21,6 +21,20 @@ namespace OOBootCamp2015
             get { return count == cars.Count; }
         }
 
+        public int Count {
+            get { return count; }
+        }
+
+        public string Report(int prefixCount)
+        {
+            string prefix = "";
+            for (int i = 0; i < prefixCount; i++)
+            {
+                prefix += "    ";
+            }
+            return prefix + "P " + Space + " " + count + "\r\n";
+        }
+
         public double Vacancy {
             get
             {

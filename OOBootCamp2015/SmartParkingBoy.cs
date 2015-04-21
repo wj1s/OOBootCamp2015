@@ -12,5 +12,10 @@ namespace OOBootCamp2015
         {
             return parkingAndStores.OrderByDescending(pl => pl.Space).First();
         }
+
+        public string Report(int prefixCount)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

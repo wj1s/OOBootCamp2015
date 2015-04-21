@@ -27,6 +27,20 @@ namespace OOBootCamp2015
             get { return parkingAndStores.All(p => p.IsFull); }
         }
 
+        public int Count {
+            get
+            {
+                return parkingAndStores.Sum(parkingAndStore => parkingAndStore.Count);
+            } 
+        }
+
+        public int Space {
+            get
+            {
+                return parkingAndStores.Sum(parkingAndStore => parkingAndStore.Space);
+            }
+        }
+
         protected abstract ICanParkingAndStore FindCanStore();
     }
 }
