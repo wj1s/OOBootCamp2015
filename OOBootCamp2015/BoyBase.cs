@@ -41,6 +41,15 @@ namespace OOBootCamp2015
             }
         }
 
+        public string Report(int prefixCount = 0)
+        {
+            string report = parkingAndStores.Aggregate("", (current, store) => current + (store.Report(prefixCount + 1)));
+            return (prefixCount == 0? "\r\n": prefixCount.Prefix()) + GetReportHead() + " " + Space + " " + Count + "\r\n" + report;
+        }
+
         protected abstract ICanParkingAndStore FindCanStore();
+
+        protected abstract string GetReportHead();
+        
     }
 }

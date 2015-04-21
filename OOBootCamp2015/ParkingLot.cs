@@ -27,12 +27,8 @@ namespace OOBootCamp2015
 
         public string Report(int prefixCount)
         {
-            string prefix = "";
-            for (int i = 0; i < prefixCount; i++)
-            {
-                prefix += "    ";
-            }
-            return prefix + "P " + Space + " " + count + "\r\n";
+
+            return prefixCount.Prefix() + "P " + Space + " " + count + "\r\n";
         }
 
         public double Vacancy {

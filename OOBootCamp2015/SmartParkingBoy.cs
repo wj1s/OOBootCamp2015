@@ -13,9 +13,9 @@ namespace OOBootCamp2015
             return parkingAndStores.OrderByDescending(pl => pl.Space).First();
         }
 
-        public string Report(int prefixCount)
+        protected override string GetReportHead()
         {
-            throw new System.NotImplementedException();
+            return "B";
         }
     }
 }

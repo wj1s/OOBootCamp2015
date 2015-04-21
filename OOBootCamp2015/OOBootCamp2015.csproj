@@ -59,6 +59,7 @@
     <Compile Include="ManagerFacts.cs" />
     <Compile Include="ReportFacts.cs" />
     <Compile Include="SmartParkingBoy.cs" />
+    <Compile Include="PrefixExtensions.cs" />
     <Compile Include="SuperParkingBoyFacts.cs" />
     <Compile Include="SmartParkingBoyFacts.cs" />
     <Compile Include="ParkingBoyFacts.cs" />
