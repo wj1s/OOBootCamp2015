@@ -50,8 +50,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoyBase.cs" />
     <Compile Include="Car.cs" />
-    <Compile Include="IParkingAndStore.cs" />
+    <Compile Include="ICanParkingAndStore.cs" />
     <Compile Include="LengthFacts.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="ParkingBoy.cs" />

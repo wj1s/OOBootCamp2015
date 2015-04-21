@@ -2,34 +2,16 @@
 
 namespace OOBootCamp2015
 {
-    public class ParkingBoy : IParkingAndStore
+    public class ParkingBoy : BoyBase, ICanParkingAndStore
     {
-        protected readonly ParkingLot[] parkinglots;
 
-        public ParkingBoy(ParkingLot[] parkinglots)
+        public ParkingBoy(ParkingLot[] parkingAndStores): base(parkingAndStores)
         {
-            this.parkinglots = parkinglots;
         }
 
-        public Ticket Store(Car car)
+        protected override ICanParkingAndStore FindCanStore()
         {
-            var parkingLot = FindParkingLot();
-
-            return parkingLot != null ? parkingLot.Store(car) : null;
-        }
-
-        public Car Pick(Ticket ticket)
-        {
-            return parkinglots.Select(parkinglot => parkinglot.Pick(ticket)).FirstOrDefault(car => car != null);
-        }
-
-        public bool IsFull {
-            get { return parkinglots.All(p => p.IsFull); }
-        }
-
-        public virtual ParkingLot FindParkingLot()
-        {
-            return parkinglots.FirstOrDefault(pl => !pl.IsFull);
+            return parkingAndStores.FirstOrDefault(pl => !pl.IsFull);
         }
     }
 }

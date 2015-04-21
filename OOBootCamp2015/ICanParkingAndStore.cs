@@ -1,6 +1,6 @@
 ﻿namespace OOBootCamp2015
 {
-    public interface IParkingAndStore
+    public interface ICanParkingAndStore
     {
         Ticket Store(Car car);
         Car Pick(Ticket ticket);

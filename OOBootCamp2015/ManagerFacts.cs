@@ -111,7 +111,7 @@ namespace OOBootCamp2015
         [Fact]
         public void should_pick_a_car_and_store_a_car_by_a_boy_and_a_parking_lot()
         {
-            var manager = new Manager(new IParkingAndStore[] { new ParkingBoy(new[] {new ParkingLot(1)}),new ParkingLot(1)});
+            var manager = new Manager(new ICanParkingAndStore[] { new ParkingBoy(new[] {new ParkingLot(1)}),new ParkingLot(1)});
             var firstCar = new Car();
             var secondCar = new Car();
 

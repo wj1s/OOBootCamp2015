@@ -2,13 +2,16 @@
 
 namespace OOBootCamp2015
 {
-    public class SmartParkingBoy : ParkingBoy
+    public class SmartParkingBoy : BoyBase, ICanParkingAndStore
     {
+        protected readonly ParkingLot[] parkinglots;
+
         public SmartParkingBoy(ParkingLot[] parkingLots) : base(parkingLots)
         {
+            parkinglots = parkingLots;
         }
 
-        public override ParkingLot FindParkingLot()
+        protected override ICanParkingAndStore FindCanStore()
         {
             return parkinglots.OrderByDescending(pl => pl.Space).First();
         }
