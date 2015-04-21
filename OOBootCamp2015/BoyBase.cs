@@ -2,11 +2,11 @@
 
 namespace OOBootCamp2015
 {
-    public abstract class BoyBase 
+    public abstract class BoyBase<T> where T : ICanParkingAndStore
     {
-        protected ICanParkingAndStore[] parkingAndStores;
+        protected T[] parkingAndStores;
 
-        protected BoyBase(ICanParkingAndStore[] parkingAndStores)
+        protected BoyBase(T[] parkingAndStores)
         {
             this.parkingAndStores = parkingAndStores;
         }

@@ -2,7 +2,7 @@
 
 namespace OOBootCamp2015
 {
-    public class Manager : BoyBase
+    public class Manager : BoyBase<ICanParkingAndStore>
     {
         public Manager(ICanParkingAndStore[] parkingAndStores) : base(parkingAndStores)
         {

@@ -2,9 +2,8 @@
 
 namespace OOBootCamp2015
 {
-    public class ParkingBoy : BoyBase, ICanParkingAndStore
+    public class ParkingBoy : BoyBase<ParkingLot>, ICanParkingAndStore
     {
-
         public ParkingBoy(ParkingLot[] parkingAndStores): base(parkingAndStores)
         {
         }
